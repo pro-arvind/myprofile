@@ -3,6 +3,8 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
    <script src="https://kit.fontawesome.com/441d92d2d1.js" crossorigin="anonymous"></script>
     
@@ -16,13 +18,13 @@
   	}
    	
      #img{
-     			margin-top:-1000px;
+     	    margin-top:650px;
         	border-radius:50%;
         	border:2px solid red;
          	}
      				
      			#detail{
-     							margin-top:-380px;
+     						//display:none;
      							position:relative;
      							 width:88%;
      							 border-radius:20px;
@@ -43,27 +45,32 @@
      		   padding-top:11px;
      		    border-radius:50%;}
      		    
-     		    
-     	
-     						
+     
+     		#x{
+     						margin-top:-600px;}				
      							
    </style>
   <body>
    
    
-   <svg height="600px" width="100%"
+  <svg height="600px" width="100%" id="x"
     viewBox="0 0 1 1" preserveAspectRatio="none">
     
     
-    <polyline points="0,0 1,0 0,1" fill="#222" id="top"/>
+    <polyline  points="0,0 1,0 0,1" fill="#222" id="top"/>
+    
+    </svg>
+    
+    <!--<svg height="600px" width="100%" id="x"
+    viewBox="0 0 1 1" preserveAspectRatio="none">
      <polyline points="1,0 1,1 0,1" fill="green" id="bottom"/> 
-        </svg>
+        </svg>-->
     
     
    
    
    <center>
-    <img src="logo.JPG" id="img" width="180px" height="180px"/>
+    <img src="logo.jpg" id="img" width="180px" height="180px"/>
    </center>
   
   
@@ -102,8 +109,8 @@
     <table id="icon" style="margin-top:30px" width="100%">
       <tr>
         
-        <td><center><div><i class="fa fa-facebook"></i></div></center></td>
-         <td><center><div><i class="fa fa-instagram"></i></div></center></td>
+        <td><center><div id="fac"><i class="fa fa-facebook"></i></div></center></td>
+         <td><center><div id="insta"><i class="fa fa-instagram"></i></div></center></td>
          <td><center><div><i class="fa fa-envelope-o"></i></div></center></td>
          
          
@@ -112,7 +119,28 @@
    </div>
    </center>
    
- 
+
  
   </body> 
+  <script>
+  
+  $(document).ready(function(){
+  		$("#img").animate({marginTop:"-1000"},800); 
+  		
+  	$("#detail").animate({marginTop:"-380"},1400);
+  		
+  		$("#x").animate({marginTop:"0px"},400);
+  			
+  			
+  			$("#fac").on("click",function(){
+  							window.location="https://www.facebook.com/profile.php?id=100027106157907";
+  							});	
+  							
+  							
+  	$("#insta").on("click", function(){
+  					
+  					window.location="https://www.instagram.com/prajapati_arvind2001/";
+  											});
+  				});
+  </script>
 </html>
